@@ -31,8 +31,7 @@ def getFileName(path):
             fileNum += 1
     return fileNum, fileList
 
-
-if __name__ == "__main__":
+def runTest():
     test = VoiceSexTest()
     malePath = "/data/sound/male"
     femalePath = "/data/sound/female"
@@ -41,11 +40,11 @@ if __name__ == "__main__":
     print("maleVoiceCount %d" % maleVoiceCount)
     print("femaleVoiceCount %d" % femaleVoiceCount)
     maleResCount, femaleResCount = 0, 0
-    #print(count, files)
+    # print(count, files)
     for maleFile in maleFiles:
         """男声测试数据收集"""
-        res = test.getRes(malePath+'/'+maleFile)
-        #print(res)
+        res = test.getRes(malePath + '/' + maleFile)
+        # print(res)
         if res["data"] == "male":
             maleResCount += 1
         elif res["data"] == "female":
@@ -55,8 +54,8 @@ if __name__ == "__main__":
 
     for femaleFile in femaleFiles:
         """女声测试数据收集"""
-        res = test.getRes(femalePath+'/'+femaleFile)
-        #print(res)
+        res = test.getRes(femalePath + '/' + femaleFile)
+        # print(res)
         if res["data"] == "female":
             femaleResCount += 1
         elif res["data"] == "male":
@@ -64,8 +63,11 @@ if __name__ == "__main__":
         else:
             print(res["message"])
 
-    maleResult = maleResCount/maleVoiceCount
+    maleResult = maleResCount / maleVoiceCount
     femaleResult = femaleResCount / femaleVoiceCount
 
     print("Test result for male voice: %0.4f" % maleResult)
     print("Test result for female voice: %0.4f" % femaleResult)
+
+if __name__ == "__main__":
+    runTest()
