@@ -14,7 +14,7 @@ class VoiceSexTest():
         files = {
             "file": open(file, "rb")
         }
-        r = requests.post(self.url, files=files)
+        r = requests.post(self.url, files=files, timeout=0.5)
         #print(r.status_code)
         res = r.json()
         return res
