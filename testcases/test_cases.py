@@ -22,55 +22,14 @@ class TestVioce(unittest.TestCase):
     def tearDownClass(cls):
         pass
 
-    def test_get_result_11(self):
+    def test_get_resul(self):
+        """设置切片范围可以更改测试数据比例 """
         male_result = get_result.GetResult("male", 1000, 1200).get_result()
         time.sleep(5)
         female_result = get_result.GetResult("female", 1000, 1200).get_result()
         print(male_result, female_result)
         self.assertGreaterEqual(male_result, 0.9)
         self.assertGreaterEqual(female_result, 0.9)
-
-    # def test_get_result_37(self):
-    #     male_result = get_result.GetResult("male", 1000, 1300).get_result()
-    #     female_result = get_result.GetResult("female", 2000, 2700).get_result()
-    #     print(male_result, female_result)
-    #     self.assertGreaterEqual(male_result, 0.9)
-    #     self.assertGreaterEqual(female_result, 0.9)
-    #
-    # def test_get_result_28(self):
-    #     male_result = get_result.GetResult("male", 1000, 1200).get_result()
-    #     female_result = get_result.GetResult("female", 2000, 2800).get_result()
-    #     print(male_result, female_result)
-    #     self.assertGreaterEqual(male_result, 0.9)
-    #     self.assertGreaterEqual(female_result, 0.9)
-    #
-    # def test_get_result_46(self):
-    #     male_result = get_result.GetResult("male", 1000, 1400).get_result()
-    #     female_result = get_result.GetResult("female", 2000, 2600).get_result()
-    #     print(male_result, female_result)
-    #     self.assertGreaterEqual(male_result, 0.9)
-    #     self.assertGreaterEqual(female_result, 0.9)
-    #
-    # def test_get_result_64(self):
-    #     male_result = get_result.GetResult("male", 1000, 1600).get_result()
-    #     female_result = get_result.GetResult("female", 2000, 2400).get_result()
-    #     print(male_result, female_result)
-    #     self.assertGreaterEqual(male_result, 0.9)
-    #     self.assertGreaterEqual(female_result, 0.9)
-    #
-    # def test_get_result_73(self):
-    #     male_result = get_result.GetResult("male", 1000, 1700).get_result()
-    #     female_result = get_result.GetResult("female", 2000, 2300).get_result()
-    #     print(male_result, female_result)
-    #     self.assertGreaterEqual(male_result, 0.9)
-    #     self.assertGreaterEqual(female_result, 0.9)
-    #
-    # def test_get_result_82(self):
-    #     male_result = get_result.GetResult("male", 1000, 1800).get_result()
-    #     female_result = get_result.GetResult("female", 2000, 2200).get_result()
-    #     print(male_result, female_result)
-    #     self.assertGreaterEqual(male_result, 0.9)
-    #     self.assertGreaterEqual(female_result, 0.9)
 
 
 if __name__ == '__main__':
