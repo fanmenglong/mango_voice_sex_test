@@ -25,6 +25,5 @@ class GetFiles(object):
             logger.info("测试样本切片[%d:%d]" % (start_num, end_num))
             return files[start_num:end_num]
         logger.debug("准备样本小于需要数量, 当前总样本数 %d" % (len(files)))
-        logger.debug("dddd")
         return files
 
